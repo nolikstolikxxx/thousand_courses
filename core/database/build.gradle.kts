@@ -1,0 +1,21 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace = "com.example.thousandcourses.core.database"
+
+    compileSdk = 36
+
+    defaultConfig {
+        minSdk = 24
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+
+    ksp(libs.androidx.room.compiler)
+}

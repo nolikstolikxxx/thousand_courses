@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.thousandcourses.feature.login.presentation.LoginFragment"
+        android:label="Login">
+
+
+        <action
+            android:id="@+id/action_login_to_courses"
+            app:destination="@id/coursesFragment"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.thousandcourses.feature.courses.presentation.CoursesFragment"
+        android:label="Courses"/>
+
+
+</navigation>
