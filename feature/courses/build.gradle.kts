@@ -23,6 +23,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
 
+    implementation(libs.androidx.navigation.fragment.ktx)
+
     implementation(project(":core:common"))
     implementation(project(":core:network"))
     implementation(project(":core:database"))

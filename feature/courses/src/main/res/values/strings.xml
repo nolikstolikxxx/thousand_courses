@@ -5,5 +5,15 @@
     <string name="search">Поиск</string>
     <string name="filter">Фильтр</string>
     <string name="error_loading_courses">Error loading courses</string>
+    <string name="read_more">Подробнее →</string>
+    <string name="course_image">Course image</string>
+    <string name="favorite_course">Favorite course</string>
+    <string name="course_rating_placeholder">4.9</string>
+    <string name="sort_by_title">Sort by title</string>
+    <string name="sort_by_rating">Sort by rating</string>
+    <string name="sort_by_publish_date">Sort by publish date</string>
+    <string name="course_details">Сourse details</string>
+    <string name="rating">★ Rating</string>
+    <string name="enroll">Enroll</string>
 
 </resources>

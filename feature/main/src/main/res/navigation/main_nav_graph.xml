@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/main_nav_graph"
+
+    app:startDestination="@id/coursesFragment">
+
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.thousandcourses.feature.courses.presentation.CoursesFragment"
+        android:label="Courses"/>
+
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.thousandcourses.feature.favorites.presentation.FavoritesFragment"
+        android:label="Favorites"/>
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.thousandcourses.feature.profile.presentation.ProfileFragment"
+        android:label="Profile"/>
+
+
+</navigation>

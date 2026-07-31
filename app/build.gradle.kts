@@ -49,10 +49,15 @@ dependencies {
 
     implementation(libs.koin.android)
 
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+
     implementation(project(":core:network"))
+    implementation(project(":core:database"))
 
     implementation(project(":feature:login"))
     implementation(project(":feature:courses"))
     implementation(project(":feature:favorites"))
     implementation(project(":feature:profile"))
+    implementation(project(":feature:main"))
 }

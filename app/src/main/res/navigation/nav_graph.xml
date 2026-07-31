@@ -8,24 +8,31 @@
 
     app:startDestination="@id/loginFragment">
 
-
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.thousandcourses.feature.login.presentation.LoginFragment"
         android:label="Login">
 
-
         <action
-            android:id="@+id/action_login_to_courses"
-            app:destination="@id/coursesFragment"/>
+            android:id="@+id/action_login_to_main"
+            app:destination="@id/mainFragment"/>
 
     </fragment>
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.thousandcourses.feature.main.presentation.MainFragment"
+        android:label="Main"/>
 
     <fragment
-        android:id="@+id/coursesFragment"
-        android:name="com.example.thousandcourses.feature.courses.presentation.CoursesFragment"
-        android:label="Courses"/>
+        android:id="@+id/courseDetailFragment"
+        android:name="com.example.thousandcourses.feature.courses.presentation.detail.CourseDetailFragment"
+        android:label="Course Details">
 
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+
+    </fragment>
 
 </navigation>

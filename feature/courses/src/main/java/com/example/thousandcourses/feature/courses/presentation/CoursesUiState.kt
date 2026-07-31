@@ -5,5 +5,6 @@ import com.example.thousandcourses.feature.courses.presentation.model.CourseUiMo
 data class CoursesUiState(
     val courses: List<CourseUiModel> = emptyList(),
     val isLoading: Boolean = false,
-    val errorMessage: String? = null
+    val errorMessage: String? = null,
+    val searchQuery: String = ""
 )

@@ -1,0 +1,29 @@
+<resources>
+
+    <dimen name="course_card_margin_horizontal">16dp</dimen>
+
+    <dimen name="course_card_margin_top">12dp</dimen>
+
+    <dimen name="course_card_radius">16dp</dimen>
+
+    <dimen name="course_image_height">180dp</dimen>
+
+    <dimen name="course_content_margin">16dp</dimen>
+
+    <dimen name="course_small_margin">8dp</dimen>
+
+    <dimen name="course_large_margin">16dp</dimen>
+
+    <dimen name="course_favorite_size">40dp</dimen>
+
+    <dimen name="course_rating_padding_horizontal">8dp</dimen>
+
+    <dimen name="course_rating_padding_vertical">4dp</dimen>
+
+    <dimen name="courses_screen_horizontal_margin">16dp</dimen>
+
+    <dimen name="courses_screen_top_margin">16dp</dimen>
+
+    <dimen name="courses_section_spacing">12dp</dimen>
+
+</resources>

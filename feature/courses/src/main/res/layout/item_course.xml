@@ -1,59 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/course_card_margin_horizontal"
+    android:layout_marginTop="@dimen/course_card_margin_top"
 
-    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/course_card_background"
+    app:cardCornerRadius="@dimen/course_card_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
 
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
-
-
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content">
 
-        android:orientation="vertical"
-        android:padding="16dp">
+        <ImageView
+            android:id="@+id/courseImageView"
 
+            android:layout_width="0dp"
+            android:layout_height="@dimen/course_image_height"
+
+            android:background="@drawable/course_placeholder"
+
+            android:contentDescription="@string/course_image"
+
+            android:scaleType="centerCrop"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:src="@drawable/course_placeholder" />
+
+        <ImageButton
+            android:id="@+id/favoriteImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="12dp"
+            android:background="@android:color/transparent"
+
+            android:contentDescription="@string/favorite_course"
+            android:src="@drawable/ic_favorite_outline"
+
+            app:layout_constraintEnd_toEndOf="@id/courseImageView"
+            app:layout_constraintTop_toTopOf="@id/courseImageView" />
 
         <TextView
-
-            android:id="@+id/courseTitleTextView"
-
-            android:layout_width="match_parent"
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_margin="12dp"
+            android:background="@color/course_rating_background"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
 
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            app:layout_constraintStart_toStartOf="@id/courseImageView"
 
+            app:layout_constraintTop_toTopOf="@id/courseImageView"
+            tools:text="@string/course_rating_placeholder" />
 
         <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+
+            android:textColor="@color/course_secondary_text"
+            android:textSize="12sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/courseImageView"
+
+            tools:text="Start 12 May 2025" />
+
+        <TextView
+            android:id="@+id/courseTitleTextView"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/course_content_margin"
+            android:layout_marginTop="@dimen/course_small_margin"
+            android:layout_marginEnd="@dimen/course_content_margin"
+
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:text="Android Development Course"/>
+
+        <TextView
             android:id="@+id/courseDescriptionTextView"
 
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="8dp"/>
+            android:layout_marginStart="@dimen/course_content_margin"
+            android:layout_marginTop="@dimen/course_small_margin"
+            android:layout_marginEnd="@dimen/course_content_margin"
 
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            android:textColor="@color/course_secondary_text"
+            android:textSize="14sp"
+
+            app:layout_constraintTop_toBottomOf="@id/courseTitleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:text="Learn modern technologies and build your first Android applications."/>
 
         <TextView
+            android:id="@+id/priceTextView"
 
-            android:id="@+id/courseInfoTextView"
-
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="8dp"/>
+            android:layout_marginStart="@dimen/course_content_margin"
+            android:layout_marginTop="@dimen/course_large_margin"
+            android:layout_marginBottom="@dimen/course_content_margin"
 
+            android:textSize="20sp"
+            android:textStyle="bold"
 
-    </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@id/courseDescriptionTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
 
+            tools:text="2 999 ₽"/>
+
+        <TextView
+            android:id="@+id/detailsTextView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/course_content_margin"
+
+            android:textColor="@color/course_secondary_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            android:text="@string/read_more"
+
+            app:layout_constraintTop_toTopOf="@id/priceTextView"
+            app:layout_constraintBottom_toBottomOf="@id/priceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:text="Подробнее →"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile">Profile</string>
+
+    <string name="profile_placeholder">
+    This screen is not implemented in the test assignment.
+</string>
+</resources>

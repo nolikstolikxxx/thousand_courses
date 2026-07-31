@@ -6,5 +6,6 @@ data class CourseUiModel(
     val description: String,
     val price: String,
     val rating: String,
+    val publishDate: String,
     val isLiked: Boolean
 )

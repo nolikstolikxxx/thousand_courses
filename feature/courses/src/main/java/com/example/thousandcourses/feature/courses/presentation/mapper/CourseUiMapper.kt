@@ -3,6 +3,7 @@ package com.example.thousandcourses.feature.courses.presentation.mapper
 import com.example.thousandcourses.feature.courses.data.model.CourseDto
 import com.example.thousandcourses.feature.courses.presentation.model.CourseUiModel
 
+
 fun CourseDto.toUiModel(): CourseUiModel {
 
     return CourseUiModel(
@@ -11,6 +12,7 @@ fun CourseDto.toUiModel(): CourseUiModel {
         description = text,
         price = price,
         rating = rate,
+        publishDate = publishDate,
         isLiked = hasLike
     )
 }
